@@ -1,4 +1,4 @@
-$Introduction:
+# Introduction:
 
 In this project, I explored the applications of visual interfaces in augmented reality (AR)
 systems by creating a demo for an augmented reality game inspired by first person shooters
@@ -50,9 +50,10 @@ The OpenCV library was also used in the hit detection system, alongside the nump
 prebuilt deep-learning model was loaded in and used for instance segmentation. Finally, the
 matplotlib library was used to display several visualizations to the user.
 
-Implementation:
+# Implementation:
 
-STEP 0 — User Interface:
+## STEP 0 — User Interface:
+
 The first thing that I needed to implement was an interface that allows a user to view a
 live camera feed and take pictures. I used cv2.VideoCapture() and cv2.imshow() to capture and
 display a live camera feed. Then, I integrated source code from a public github repository1 to
@@ -62,7 +63,8 @@ detecting whether or not a shot has successfully hit the target opponent. The im
 the HitDetector will be discussed in the following sections. Finally, I used an object of
 PySimpleGUI’s Text class to display a prompt that describes the result of said shot.
 
-STEP 1 — Mask R-CNN Instance Segmentation:
+## STEP 1 — Mask R-CNN Instance Segmentation:
+
 As discussed in the introduction, the hit detection system I am attempting to implement
 follows a two step process. First, the system must be able to evaluate whether or not the reticle is
 positioned over an image that resembles a human. In order to accomplish this, I used a
@@ -98,7 +100,8 @@ Otherwise, if a hit has been landed, the system has to determine whether the hum
 and moves on to step 2. Step 1 did not require much fine-tuning; by relying on the power of the
 segmentation masks produced by the Mask R-CNN, I was able to get reliable results.
 
-Step 2 — Color Distance and Shape Detection:
+## Step 2 — Color Distance and Shape Detection:
+
 As discussed in the introduction, I am using domain engineering to designate the target
 opponent, by taping a colored square to their shirt. To detect the square, the system must know
 what color it is; therefore, I implemented a calibration feature that allows a user to hover their
@@ -129,7 +132,7 @@ determine whether or not the colored square was present. If the square was deter
 present, shoot() returns 1 as its first output, indicating that the shot has hit the target opponent.
 Otherwise, shoot() returns 2, to indicate that a bystander has been hit.
 
-Overall Pipeline:
+# Overall Pipeline:
 
 First, the user positions their reticle over the colored square and presses calibrate to store
 its color as an ID. Then, the user presses shoot and an image is taken. The image is passed to the
@@ -147,7 +150,8 @@ identifying the target based on color or shape alone, we might want to make thes
 more strict. But since we are taking both color and shape into account when evaluating the target,
 each individual threshold does not have to be as stringent.
 
-Evaluation:
+# Evaluation:
+
 In order to evaluate my system, I took a series of shots and compared the expected status
 (shot missed, shot hit, bystander hit) with the status predicted by the hit detector. I gathered 20
 shots that missed, 20 shots that hit, and 20 shots that hit a bystander, identifying any
@@ -180,7 +184,8 @@ target hits as misses. Our results also suggest that the color mask approach is 
 see a clear square pattern in the color masks of our hits. Nevertheless, the approach would
 benefit from some finetuning; three target hits are still incorrectly recognized as bystander hits.
 
-Conclusion:
+# Conclusion:
+
 Overall, I was really happy with the performance of my hit detection system. Out of 60
 shots, 53 were labeled correctly, for a total accuracy of 88.33%. In addition, the visualizations
 produced are consistent with my expectations, which suggests that the instance segmentation and
@@ -205,7 +210,8 @@ network that allows the devices of multiple players to communicate with one anot
 The code used for this assignment was quite long; it has been included in the .zip file of
 my submission.
 
-References:
+# References:
+
 [1] Akpythonyt, A. (2020, December 20). Camera.py. GitHub.
 https://github.com/akpythonyt/AKpythoncodes/blob/main/Camera.py
 [2] Antoniadis, P . (2022, November 4). How to Compute the Similarity of Colors. Baeldung.
@@ -217,7 +223,6 @@ https://www.reasonfieldlab.com/post/instance-segmentation-algorithms-overview.
 [5] Jacobs, D.W., et al. “Comparing Images under V ariable Illumination.” Proceedings. 1998
 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (Cat.
 No.98CB36231), June 1998, https://doi.org/10.1109/cvpr.1998.698668.
-22
 [6] Kandekar, A. (2020, July 28). mask-RCNN: Segmentation and object detection for google
 RVC 2020. GitHub. https://github.com/kandekar007/MASK-RCNN
 [7] Khandelwal, Renu. “Computer Vision: Instance Segmentation with Mask R-CNN.” Medium,
