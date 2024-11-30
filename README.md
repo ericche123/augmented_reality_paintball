@@ -1,4 +1,4 @@
-Introduction:
+$Introduction:
 
 In this project, I explored the applications of visual interfaces in augmented reality (AR)
 systems by creating a demo for an augmented reality game inspired by first person shooters
@@ -130,6 +130,7 @@ present, shoot() returns 1 as its first output, indicating that the shot has hit
 Otherwise, shoot() returns 2, to indicate that a bystander has been hit.
 
 Overall Pipeline:
+
 First, the user positions their reticle over the colored square and presses calibrate to store
 its color as an ID. Then, the user presses shoot and an image is taken. The image is passed to the
 shoot() method, which detects whether or not the shot hit a human through Mask R-CNN
@@ -145,6 +146,7 @@ are relatively lenient. These thresholds were fine-tuned through experimentation
 identifying the target based on color or shape alone, we might want to make these thresholds
 more strict. But since we are taking both color and shape into account when evaluating the target,
 each individual threshold does not have to be as stringent.
+
 Evaluation:
 In order to evaluate my system, I took a series of shots and compared the expected status
 (shot missed, shot hit, bystander hit) with the status predicted by the hit detector. I gathered 20
