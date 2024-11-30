@@ -214,21 +214,29 @@ my submission.
 
 [1] Akpythonyt, A. (2020, December 20). Camera.py. GitHub.
 https://github.com/akpythonyt/AKpythoncodes/blob/main/Camera.py
+
 [2] Antoniadis, P . (2022, November 4). How to Compute the Similarity of Colors. Baeldung.
 https://www.baeldung.com/cs/compute-similarity-of-colours
+
 [3] Canu, S. (2021, May 18). Instance Segmentation Mask R-CNN. Pysource.
 https://pysource.com/2021/05/18/instance- segmentation-mask-r-cnn-with-python-and-opencv/
+
 [4] “Instance Segmentation Algorithms Overview.” ReasonField Lab,
 https://www.reasonfieldlab.com/post/instance-segmentation-algorithms-overview.
+
 [5] Jacobs, D.W., et al. “Comparing Images under V ariable Illumination.” Proceedings. 1998
 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (Cat.
 No.98CB36231), June 1998, https://doi.org/10.1109/cvpr.1998.698668.
+
 [6] Kandekar, A. (2020, July 28). mask-RCNN: Segmentation and object detection for google
 RVC 2020. GitHub. https://github.com/kandekar007/MASK-RCNN
+
 [7] Khandelwal, Renu. “Computer Vision: Instance Segmentation with Mask R-CNN.” Medium,
 27 Nov. 2019, towardsdatascience.com/computer-vision-instance-segmentation-with-mask -r-
 cnn-7983502fcad1.
+
 [8] Lundgren, Jonathan. Implementation and Evaluation of Hit Registration in Networked First
 Person Shooters. 2021. Linköping University, Master of Science Thesis.
+
 [9] Peddie, Jon. “Overview of Augmented Reality System Organization.” Augmented Reality,
 2017, pp. 53–58., https://doi.org/10.1007/978-3-319-54502-8_4.
